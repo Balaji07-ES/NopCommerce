@@ -1,12 +1,13 @@
 package pageObjects;
 
-import ReusableComponents.Header;
+import ReusableComponents.BasePage;
+import ReusableComponents.WaitUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends Header {
+public class LoginPage extends BasePage {
     private WebDriver driver;
 
     public LoginPage(WebDriver driver){
@@ -38,6 +39,7 @@ public class LoginPage extends Header {
     }
 
     public boolean checkErrorMessage(){
+        WaitUtil.explicitWait(errorMessage);
         return errorMessage.isDisplayed();
     }
 }
