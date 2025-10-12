@@ -5,12 +5,11 @@ Acceptance Criteria:
 - |DONE| The Register page displays all required labels: Register, Personal Details,
                                                    Gender, First Name, Last Name, Email,
                                                    Password, Confirm Password.
-- Each label is visible and matches the expected text.
+- |DONE | Each label is visible and matches the expected text.
 - |DONE | The Gender field allows selection between Male and Female.
-- The First Name, Last Name, Email, Password, and Confirm Password fields are present and accept input.
-- The Password and Confirm Password fields mask input.
-- The Email field validates for correct email format.
-- All fields are required; submitting with missing or invalid data shows appropriate error messages.
-- The Register button is enabled only when all required fields are valid.
-- On successful registration, the user is redirected to a confirmation page or sees a success message.
-- The page layout is responsive and displays correctly on desktop and mobile devices.
+- |DONE | The First Name, Last Name, Email, Password, and Confirm Password fields are present and accept input.
+- |Done | The Password and Confirm Password fields mask input.
+- |Done | The Email field validates for correct email format.
+- |Done |All fields are required; submitting with missing or invalid data shows appropriate error messages.
+-  |Done|E2E | On successful registration, the user is redirected to a confirmation page or sees a success message.
+- |DONE | The page layout is responsive and displays correctly on desktop and mobile devices.

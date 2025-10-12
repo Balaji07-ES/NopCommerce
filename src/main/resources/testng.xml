@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite">
-    <test name="Login Tests" >
+<suite name="Register and Login Account Test Suite" >
+    <test name="Register Testcases">
+        <parameter name="browser" value="desktopChrome"/>
         <classes>
-            <class name="testcases.RegisterTest"/>
-            <class name="testcases.LoginTest"/>
+<!--            <class name="testcases.RegisterTest"/>-->
+            <class name="testcases.RegisterE2ETest"/>
         </classes>
     </test>
+
+<!--    <test name="Login Testcases">-->
+<!--    <parameter name="browser" value="desktopChrome"/>-->
+<!--    <classes>-->
+<!--        <class name="testcases.LoginTest"/>-->
+<!--        <class name="testcases.ForgotPasswordTest"/>-->
+<!--        <class name="testcases.LoginE2ETest"/>-->
+<!--        <class name="testcases.SearchTest"/>-->
+<!--    </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Search Testcases">-->
+<!--        <parameter name="browser" value="desktopChrome"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.SearchTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+        <test name="Product Order Testcases">
+            <parameter name="browser" value="desktopChrome"/>
+            <classes>
+                <class name="testcases.ProductsOrderTest"/>
+            </classes>
+        </test>
+
+
+<!--    <test name="Desktop Chrome Test">-->
+<!--        <parameter name="browser" value="desktopChrome"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.RegisterTest"/>-->
+<!--            <class name="testcases.LoginE2ETest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Desktop Firefox Test">-->
+<!--        <parameter name="browser" value="desktopFirefox"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.RegisterTest"/>-->
+<!--            <class name="testcases.LoginE2ETest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Mobile View Test">-->
+<!--        <parameter name="browser" value="mobileChrome"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.RegisterTest"/>-->
+<!--            <class name="testcases.LoginE2ETest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Tablet View Test">-->
+<!--        <parameter name="browser" value="tabletChrome"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.RegisterTest"/>-->
+<!--            <class name="testcases.LoginE2ETest"/>-->
+<!--        </classes>-->
+
 </suite>
+
+

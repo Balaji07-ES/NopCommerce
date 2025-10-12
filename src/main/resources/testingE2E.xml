@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Integration Test Suite" >
+    <test name="Register Account Test">
+        <parameter name="browser" value="desktopChrome"/>
+        <classes>
+            <class name="testcases.RegisterE2ETest"/>
+            <class name="testcases.LoginE2ETest"/>
+        </classes>
+    </test>
+</suite>
