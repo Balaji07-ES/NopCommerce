@@ -17,7 +17,7 @@ public class WaitUtil {
 
     public static void waitInitialize(WebDriver driver){
         WaitUtil.driver = driver;
-        wait=new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait=new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     public static void explicitWait(WebElement element) {
@@ -32,7 +32,6 @@ public class WaitUtil {
         wait.until(ExpectedConditions.visibilityOfAllElements(list));
    }
 
-
    public static void pageLoadWait(){
        wait.until(driver -> ((JavascriptExecutor) driver)
                .executeScript("return document.readyState")
@@ -40,9 +39,7 @@ public class WaitUtil {
 
    }
 
-   public static void waitElementClickable(WebElement element){
-       wait.until(ExpectedConditions.elementToBeClickable(element));
-   }
+
 
 
 

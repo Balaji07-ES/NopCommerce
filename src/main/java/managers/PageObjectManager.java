@@ -15,6 +15,8 @@ public class PageObjectManager {
     private ProductsCategoryPage productsCategoryPage;
     private CartPage cartPage;
     private ProductDetailPage productDetailPage;
+    private CheckoutPage checkoutPage;
+    private OrderDetailsPage orderDetailsPage;
 
     public LoginPage getLoginPage(){
         return (loginPage==null)? loginPage=new LoginPage(driver):loginPage;
@@ -42,5 +44,13 @@ public class PageObjectManager {
 
     public ProductDetailPage getProductDetailPage(){
         return (productDetailPage== null)?new ProductDetailPage(driver):productDetailPage;
+    }
+
+    public CheckoutPage getCheckoutPage(){
+        return (checkoutPage== null)?new CheckoutPage(driver):checkoutPage;
+    }
+
+    public OrderDetailsPage getOrderDetailsPage(){
+        return (orderDetailsPage== null)?new OrderDetailsPage(driver):orderDetailsPage;
     }
 }

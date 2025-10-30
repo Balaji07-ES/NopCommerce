@@ -16,7 +16,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test(priority = 1)
-    public void fieldsDisplayed(){
+    public void fieldsDisplayedTest(){
         Assert.assertTrue(registerPage.isRegisterTextDisplayed());
         Assert.assertTrue(registerPage.isPersonalDetailsTextDisplayed());
         Assert.assertTrue(registerPage.isGenderTextDisplayed());

@@ -1,13 +1,11 @@
 package testcases;
 
 import baseTest.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pageObjects.CartPage;
-import pageObjects.LoginPage;
-import pageObjects.ProductDetailPage;
-import pageObjects.ProductsCategoryPage;
+import pageObjects.*;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -30,6 +28,8 @@ public class ProductsOrderTest extends BaseTest {
     CartPage cartPage;
     ProductDetailPage productDetailPage;
     LoginPage loginPage;
+    CheckoutPage checkoutPage;
+    OrderDetailsPage orderDetailsPage;
 
     @BeforeClass
     public void placeOrderSetup(){
@@ -37,6 +37,8 @@ public class ProductsOrderTest extends BaseTest {
         cartPage=pageObjectManager.getCartPage();
         productDetailPage=pageObjectManager.getProductDetailPage();
         loginPage=pageObjectManager.getLoginPage();
+        checkoutPage=pageObjectManager.getCheckoutPage();
+        orderDetailsPage=pageObjectManager.getOrderDetailsPage();
         loginPage.navigateToLoginPage();
         loginPage.enterCredentials(regEmailID, regPassword);
         loginPage.loginButtonClick();
@@ -163,6 +165,25 @@ public class ProductsOrderTest extends BaseTest {
         cartPage.removeRecurringProduct();
         cartPage.checkTermsOfService();
         cartPage.clickCheckout();
+
+        checkoutPage.selectState();
+        checkoutPage.enterCity("New York");
+        checkoutPage.enterAddress("123 Main st");
+        checkoutPage.enterZipCode("12345");
+        checkoutPage.enterPhoneNumber("1234567890");
+        checkoutPage.addressContinueButton();
+        checkoutPage.shippingContinueButton();
+        checkoutPage.paymentContinueButton();
+        checkoutPage.paymentInfoContinueButton();
+        String orderTotal = checkoutPage.getOrderTotalAmountText();
+        checkoutPage.confirmOrderButton();
+
+        softAssert.assertEquals(orderDetailsPage.getOrderCompletedTitle(),"Thank you");
+        softAssert.assertEquals(orderDetailsPage.getThankYouMessage(),"Your order has been successfully processed!");
+        String orderNum = orderDetailsPage.getOrderNumber();
+        orderDetailsPage.clickDetailsLink();
+        softAssert.assertEquals(orderTotal,orderDetailsPage.getOrderTotalAmount());
+        softAssert.assertEquals(orderNum,orderDetailsPage.getOrderNumFromSummary());
 
     }
 

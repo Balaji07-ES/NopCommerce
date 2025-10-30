@@ -28,7 +28,7 @@ public class ProductsCategoryPage extends BasePage {
 
 
     public String getProductPageTitle()  {
-        WaitUtil.pageLoadWait();
+//        WaitUtil.pageLoadWait();
         WaitUtil.explicitWait(productDetailHeading);
         return productDetailHeading.getText();
     }

@@ -210,24 +210,24 @@ public class BasePage {
     }
 
     public void cartIconClick() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         cartIcon.click();
     }
 
     public void digitalDownloadsClick() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         digitalDownloads.click();
     }
     public void booksClick() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         booksLink.click();
     }
     public void jewelryClick() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         jewelryLink.click();
     }
     public void giftCardsClick() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         giftCardsLink.click();
     }
 

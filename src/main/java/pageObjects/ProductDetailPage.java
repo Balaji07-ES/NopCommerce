@@ -57,10 +57,10 @@ public class ProductDetailPage extends BasePage {
     @FindBy(css = ".ui-datepicker-calendar")
     private WebElement datePicker;
 
-    @FindBy(xpath = "(//td[a])[27]")
+    @FindBy(xpath = "(//td[a])[31]")
     private WebElement startDate;
 
-    @FindBy(xpath = "(//td[a])[28]")
+    @FindBy(xpath = "(//td[a])[1]")
     private WebElement endDate;
 
     @FindBy(xpath = "//button[text()='Rent']")
@@ -226,7 +226,9 @@ public class ProductDetailPage extends BasePage {
 
     public void giftCardAddToCartClick(String recipientName, String yourName){
             try {
+                senderEmailInput.clear();
                 senderEmailInput.sendKeys("abc@gmail.com");
+                recipientEmailInput.clear();
                 recipientEmailInput.sendKeys("bcs@gmail.com");
             } catch (Exception e) {
                 System.out.println("No email field present");
